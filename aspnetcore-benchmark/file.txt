@@ -1,0 +1,46 @@
+Dicas para você iniciar no Entity Framework Core do jeito certo
+15/05/2016	Nenhum comentário Edit
+Share Button
+
+Pin It
+inShare
+14
+Assim como toda a plataforma nova que a Microsoft está lançando o EF Core (antigo Entity Framework 7) está sendo completamente reescrito e deve ser lançado junto com o ASP.NET Core no final de junho.
+Sendo assim há algumas coisas que precisamos ficar atentos a este novo framework:
+
+EF para Web
+O time do EF Core está focando principalmente em funcionalidades agregam valor para aplicações web, estão deixando a performance cada vez melhor, melhorando a experiência com entidades desconectadas e otimizando o funcionamento do lazy loading.
+
+Migração para EF Core
+A migração do EF 6 para EF Core não será automática. Como são frameworks diferentes, não manterão compatibilidade, apenas as interfaces serão em parte reutilizadas.Para instalar o EF Core atualmente você deve usar a opção “-pre” no NuGet quando o EF Core for lançado de fato em RTM a instalação irá mudar para “install-package entityframework.core”.
+
+Multiplataforma
+Como era de se esperar o EF Core também é multiplataforma, podendo executar em ambientes Windows, Linux e Mac OS. No entanto há algo interessante a se notar em relação ao EF Core que não se aplica ao ASP.NET. Nesta nova versão será possível usar o Entity Framework para acessar dados em dispositivos móveis usando SQLite como provider, assim você poderá programar usando o EF Core no Windows Phone 8 e Windows Store Apps, ou — num futuro próximo — em aplicações Xamarin para Android e iOS.
+
+Providers
+Existem alguns providers já implementados e funcionais nesta nova versão do EF:
+
+Microsoft SQL Server
+Microsoft SQL Server Compact Edition
+SQLite
+Npgsql (PostgreSQL)
+IBM Data Servers
+InMemory (usado para fazer testes)
+Command line
+O EF Core possui uma interface para console de linha de comando para facilitar e automatizar tarefas comuns como atualizar a base dados ou adicionar um migration.Para instalar o pacote de linha de comando do EF Core você precisa executar o script:
+
+Install-Package EntityFramework.Commands -Pre
+Depois de instalado você deverá adicionar um comando no project.json para representar o EF Commands:
+
+"commands": {
+    "ef": "EntityFramework.Commands"
+  },
+Para executar os comandos do EF Core você poderá a partir da pasta usar o seguinte command-line:
+
+dnx ef database update
+Entity Framework Command Line
+Roadmap do EF Core
+https://github.com/aspnet/EntityFramework/wiki/
+
+Documentação do EF Core
+https://docs.efproject.net/en/latest/
