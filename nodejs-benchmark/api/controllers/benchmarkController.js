@@ -6,7 +6,7 @@ var router = express.Router();
 router.route('/benchmark/list').get(function(request, response) {
     var list = [];
 
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 30; i++) {
         list.push({
             Line1: "texto " + i,
             Line2: i,

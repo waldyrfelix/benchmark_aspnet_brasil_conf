@@ -18,7 +18,7 @@ namespace aspnetcore_benchmark.Controllers
         {
             var list = new List<Result>();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 30; i++)
             {
                 list.Add(new Result
                 {
