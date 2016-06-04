@@ -1,6 +1,6 @@
-var express = require('express');
 var fs = require('fs');
 var readline = require('readline');
+var express = require('express');
 var router = express.Router();
 
 router.route('/benchmark/list').get(function(request, response) {
@@ -15,7 +15,7 @@ router.route('/benchmark/list').get(function(request, response) {
     }
 
     response.json(list);
-});
+  });
 
 router.route('/benchmark/file').get(function(request, response) {
     var list = [];

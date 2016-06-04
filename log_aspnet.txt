@@ -1,0 +1,63 @@
+16 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  16 threads and 16 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    64.28ms  211.34ms   1.21s    92.27%
+    Req/Sec   293.45     75.74   530.00     77.88%
+  41833 requests in 10.08s, 180.93MB read
+Requests/sec:   4148.26
+Transfer/sec:     17.94MB
+-----------
+32 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  32 threads and 32 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.52ms    3.77ms 114.41ms   90.03%
+    Req/Sec   159.58     26.08   232.00     75.88%
+  51050 requests in 10.04s, 220.80MB read
+Requests/sec:   5084.47
+Transfer/sec:     21.99MB
+-----------
+64 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  32 threads and 64 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    15.28ms   11.31ms 169.49ms   92.45%
+    Req/Sec   144.47     43.73   260.00     69.66%
+  46268 requests in 10.06s, 200.11MB read
+Requests/sec:   4600.47
+Transfer/sec:     19.90MB
+------------
+128 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  32 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    51.73ms   38.95ms 365.06ms   88.50%
+    Req/Sec    81.87     36.30   797.00     74.08%
+  16424 requests in 10.11s, 71.03MB read
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1624.41
+Transfer/sec:      7.03MB
+------------
+256 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  32 threads and 256 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    63.21ms   80.08ms 749.25ms   84.62%
+    Req/Sec   120.75    109.80   474.00     67.57%
+  11187 requests in 10.11s, 48.38MB read
+  Socket errors: connect 37, read 59, write 0, timeout 0
+  Non-2xx or 3xx responses: 1
+Requests/sec:   1106.54
+Transfer/sec:      4.79MB
+------------
+512 conexões
+Running 10s test @ http://localhost:5000/api/benchmark/file
+  32 threads and 512 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    43.75ms   87.33ms 815.57ms   86.07%
+    Req/Sec   115.18    111.39   828.00     86.71%
+  13029 requests in 10.09s, 56.36MB read
+  Socket errors: connect 293, read 80, write 0, timeout 0
+Requests/sec:   1290.83
+Transfer/sec:      5.58MB
